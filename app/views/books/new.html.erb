@@ -1,0 +1,7 @@
+<h1>감명깊게 읽은 책을 입력해 주세요</h1>
+<%= form_for(Book.new, url: books_path, method: 'post') do |f| %>-->
+    <%= f.text_field :title %>
+    <%= f.text_field :writer %>
+    <%= f.text_area :content %>
+    <%= f.submit '제출' %>
+<% end %>

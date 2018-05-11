@@ -1,0 +1,8 @@
+<h1>읽은 책 목록입니다.</h1>
+<ul>
+<% @books.each do |b| %>
+    <h2><li><a href = '/books/<%= b.id %>'><%= b.title %></a></li></h2>
+    <% end %>
+</ul>    
+
+<p><a href = '/books/new'>[새로작성하기]</a></p>
