@@ -9,7 +9,7 @@
 # Faker::Lorem.sentence
 
 (1..10).each do |p|
-    Post.create title: Faker::Lorem.sentence
+    Book.create title: Faker::Lorem.sentence, writer: Faker::Name.name, content: Faker::Lorem.paragraph   
 end
 
     
