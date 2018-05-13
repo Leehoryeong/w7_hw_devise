@@ -1,24 +1,20 @@
-
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+<h1>w5 과제 CRUD를 이용해 페이지 만들기</h1>
+<h2> 구현의도 </h2>
+<p>첫번째로 CRUD각각의 기본적인 기능을 적절하게 사용할 수 있는 능력을 기르고 싶었습니다. 유니라이언 강의에 기반한 내용들과 건대멋사 오프라인 수업에서 배웠던 내용들을 적절하게 사용하여 어느정도 CRUD각각에 적합한 기능을 구현했습니다.</p>
 
 
-Welcome to your Rails project on Cloud9 IDE!
+<h2>오류내용+해결방법</h2>
+<p>첫 번째 오류는 form_for를 사용하는데 있어 링크를 연결하는데 어려움이 있었습니다. as를 사용해서 routes에서 각각의 이름을 지정해주려고 했었는데 routes작성이 생각대로 연결되지 않아 시작도 못하고 있다가 resources :books 기능을 통해 막힘없이 경로를 설정해 주었습니다.
+<br>두 번째 오류는 delete기능을 구현하는데 링크가 제대로 연결되지 않아 삭제버튼을 누르면 db에서 데이터가 삭제되지만 삭제된 다음의 화면으로 연결되지 않았습니다. 이 오류는 link_to기능에서 path만 입력하고 method를 제대로 입력하지 않아 발생했던 오류였습니다. 
+<br>세 번째 오류는 부트스트랩에서 index페이지에 카드들을 전부 나열하고 싶었는데 자꾸 한줄로만 정렬되어 애를 먹다가 grid가 아닌 flex를 사용하면서 한줄에 여러가지 데이터들이 들어가게 구현했습니다.
+</p>
 
-To get started, just do the following:
+<h2>간단한소감</h2>
+<p>이번에 정말 처음부터 끝까지 혼자서 모든 것을 해결해보고 싶었습니다. 저번주 과제를 해결하지 못했다는 좌절감이 있어서 어떻게든 혼자서 해결해보고 싶어 유니라이언 강의와 현경이의 수업자료들을 몇번이고 봤던 것 같습니다. 중간중간
+다혜한테 질문하기는 했지만 CRUD라는 개념을 어느정도 이해하고 다가갈수 있었던것 같습니다. 멋사하면서 시간도 많이 들어가고 여러가지로 어려운 점도 많지만 이렇게 끝내고 날때의 뿌듯함과 몰랐던 개념을 이해하게될 때의 기분이 정말 좋은 것 같습니다. 
+포기하지 않고 끝까지 하겠다는 마음을 다시한번더 다짐한 계기였습니다. (다혜야 고마워 ㅠㅠ)</p>
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://HOSTNAME/).
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+<h2>참고문헌</h2>
+<p>유니라이언  w5-w6 강의 (CRUD)<br>
+w5_material.pdf<br>
+</p>
