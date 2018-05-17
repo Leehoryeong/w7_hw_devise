@@ -11,20 +11,22 @@
     <title>Hello, world!</title>
   </head>
   <body>
+   
+    
     <div class="d-flex justify-content-around">
       <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
         <%= form_for(@book, url: books_path, method: 'post') do |f| %>
         <div class="card-header">감명깊게 읽은 책을 입력해 주세요</div>
         <div class="card-body">
-          <h5 class="card-title"><p>제목</p><%= f.text_field :title %></h5>
-          <p class="card-text"><p>작가</p><%= f.text_field :writer %><br></p>
-          <p class="card-text"><p>내용</p><%= f.text_area :content %><br></p>
-          <p class="card-text"><%= f.submit '저장' %><br></p>
+          <%= render 'form' %>
+          <!--<h5 class="card-title"><p>제목</p><%= f.text_field :title %></h5>-->
+          <!--<p class="card-text"><p>작가</p><%= f.text_field :writer %><br></p>-->
+          <!--<p class="card-text"><p>내용</p><%= f.text_area :content %><br></p>-->
+          <!--<p class="card-text"><%= f.submit '저장' %><br></p>-->
         </div>
         <% end %>
       </div>
     </div>
-    
     
     <!--<h1>감명깊게 읽은 책을 입력해 주세요</h1>-->
     <!--<%= form_for(@book, url: books_path, method: 'post') do |f| %>-->

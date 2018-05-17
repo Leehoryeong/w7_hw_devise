@@ -16,22 +16,43 @@
   
   
   <h3 align ="center">추천 도서</h3>
-   <div class="d-flex align-content-stretch flex-wrap">
-      
+  
+  <div class = "container">
+     <div class="row">
         <% @books.each do |b| %>
-          <div class="card bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header"><a href = '/books/<%= b.id %>'><%= b.title %></a></div>
-              <div class="card-body">
-                <p class="card-title"><strong>저자</strong> : <%= b.writer   %></p>
-                <p class="card-text"><strong>줄거리</strong> <br><%= b.content %></p>
-              </div>
-            </div>
+         <div class="col-md-3">
+           <div class = "card">
+            <div class="card-body">
+               <h5> <%= link_to b.title, book_path(id: b.id) %> </h5>
+              <p class="card-title"><strong>저자</strong> : <%= b.writer   %></p>
+              <p class="card-text"><strong>줄거리</strong> <br><%= b.content %></p>
+            </div>           
+          </div>  
+         </div>
         <% end %>     
-          </div>
-       <div class="d-flex justify-content-center">
-         <a class="btn btn-primary" href='/books/new' role="button" align = "center" >새로작성하기</a>
-       </div>
-  </div>
+     </div>
+  </div>  
+    <div class="d-flex justify-content-center">
+    <%= link_to '[새로작성하기]', new_book_path %>
+    </div>
+  
+  <!-- <div class="d-flex align-content-stretch flex-wrap">-->
+      
+  <!--      <% @books.each do |b| %>-->
+  <!--        <div class="card bg-light mb-3" style="max-width: 18rem;">-->
+  <!--          <div class="card-header"><a href = '/books/<%= b.id %>'><%= b.title %></a></div>-->
+  <!--            <div class="card-body">-->
+  <!--              <p class="card-title"><strong>저자</strong> : <%= b.writer   %></p>-->
+  <!--              <p class="card-text"><strong>줄거리</strong> <br><%= b.content %></p>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--      <% end %>     -->
+  <!--        </div>-->
+       <!--<div class="d-flex justify-content-center">-->
+         
+       <!--  <a class="btn btn-primary" href='/books/new' role="button" align = "center" >새로작성하기</a>-->
+  <!--     </div>-->
+  <!--</div>-->
    
    
    
@@ -53,6 +74,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
-</html>
+
 
 

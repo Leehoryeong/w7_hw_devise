@@ -22,7 +22,8 @@
             <%= link_to '[수정하기]', edit_book_path(book_id: @book.id) %>
             <%= link_to '[삭제하기]', book_path, method: :delete %>
             <br>
-            <a class="btn btn-primary" href='/books' role="button">목록으로</a>
+            <%= link_to '[목록으로]', books_path %>
+            <!--<a class="btn btn-primary" href='/books' role="button">목록으로</a>-->
           </div>
         </div>
       

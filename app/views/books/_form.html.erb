@@ -1,0 +1,6 @@
+   <%= form_for(@book) do |f| %>
+          <h5 class="card-title"><p>제목</p><%= f.text_field :title %></h5>
+          <p class="card-text"><p>작가</p><%= f.text_field :writer %><br></p>
+          <p class="card-text"><p>내용</p><%= f.text_area :content %><br></p>
+          <p class="card-text"><%= f.submit '저장' %><br></p>
+   <% end %>
