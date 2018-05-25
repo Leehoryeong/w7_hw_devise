@@ -1,14 +1,17 @@
 class BooksController < ApplicationController
 before_action :set_book, only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user!, except: [:index, :show, :title]
   def title
   end
   
   
   def create
+    
     @book = Book.new
     @book.title = params[:book][:title]
     @book.writer = params[:book][:writer]
     @book.content = params[:book][:content]
+    @book.user_id = current_user.id
     @book.save
     redirect_to books_path
   end

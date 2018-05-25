@@ -18,11 +18,12 @@
           <div class="card-img-overlay">
             <h5 class="card-title"><%= @book.title %></h5>
             <p class="card-text"><strong>줄거리</strong> <br><%= @book.content %></p>
-            <p class="card-text">wirte by <br> <%= @book.writer %></p>
+            <p class="card-text">wirte by <br> <%= @book.writer %></p> 
             <%= link_to '[수정하기]', edit_book_path(book_id: @book.id) %>
             <%= link_to '[삭제하기]', book_path, method: :delete %>
             <br>
             <%= link_to '[목록으로]', books_path %>
+            <p>이글은 <%= @book.user.email %>님이 작성하셨습니다</p>
             <!--<a class="btn btn-primary" href='/books' role="button">목록으로</a>-->
           </div>
         </div>

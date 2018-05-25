@@ -16,9 +16,17 @@
       <img class="card-img" src="https://www.brisbane.qld.gov.au/sites/default/files/trumba/events/dgdzhbdbnghqvvogxw8biu7o_6.jpg" alt="Card image">
       <div class="card-img-overlay">
         <blockquote class="blockquote text-center">
-          <p style="font-size: 200px">&nbsp</p>
-          <p class="mb-0" style="font-size: 70px"><%= link_to '오늘 뭐 읽지?', books_path %></p>
-          <footer class="blockquote-footer">우리들의 추천도서 <cite title="Source Title">in likelionkonkuk</cite></footer>
+          <% if user_signed_in? %>
+            <p style="font-size: 200px">&nbsp</p>
+            <p class="mb-0" style="font-size: 70px"><span style="color:black"><%= link_to '오늘 뭐 읽지?',books_path %></span></p>
+            <footer class="blockquote-footer">우리들의 추천도서 <cite title="Source Title">in likelionkonkuk</cite></footer>
+            <%= link_to '[로그아웃]',destroy_user_session_path,method: :delete %> <%= link_to '[회원가입]',new_user_registration_path %>
+          <% else %>
+            <p style="font-size: 200px">&nbsp</p>
+            <p class="mb-0" style="font-size: 70px"><span style="color:black">오늘 뭐 읽지?</span></p>
+            <footer class="blockquote-footer">우리들의 추천도서 <cite title="Source Title">in likelionkonkuk</cite></footer>
+            <%= link_to '[로그인]',new_user_session_path %> <%= link_to '[회원가입]',new_user_registration_path %>
+          <% end %>  
         </blockquote>
       </div>
     </div>
